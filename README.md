@@ -1,6 +1,7 @@
 # Question
 
-1. Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each
+## Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each
+
 static:
 The default position value for elements. Elements with position: static are positioned in the normal flow of the document. They are not affected by the top, bottom, left, or right properties. Here's an example:
 
@@ -83,3 +84,56 @@ An element with position: absolute is positioned relative to its nearest positio
   }
 </style>
 ```
+
+
+# Create a form with basic validation (name, email, phone number, password, age, gender, date, color picker)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Form with Validation</title>
+</head>
+<body>
+  <h2>Basic Form with Validation</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100" required><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color" required><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+```
+
+
+#  Explain what is execution context in detail with diagram
+
+
+In JavaScript, an execution context is an abstract concept that represents the environment in which JavaScript code is executed. It includes variables, functions, objects, and the scope chain that are relevant to a particular piece of code during its runtime. Understanding execution context is essential for understanding how JavaScript code is executed.
+
+A single JavaScript program can have multiple execution contexts. Each time a function is called, a new execution context is created. The execution contexts are organized in a stack-like structure known as the "call stack" or "execution stack". The topmost execution context in the stack is the one that is currently being executed, while the other execution contexts are waiting for their turn.
